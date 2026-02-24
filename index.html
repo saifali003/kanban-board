@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanban Board</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Kanban Board</h1>
+<div class="datetime" id="datetime">
+</div>
+
+<div class="input-box">
+<input type="text" id="taskInput" placeholder="Enter Task"/>
+<input type="text" id="descInput" placeholder="Add Description"/>
+<button onclick="addTask()">Add Task</button>
+</div>
+
+
+<div class="board">
+<div class="column">
+<h2 class="pending">Pending</h2>
+<div id="pending" class="taskBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+</div>
+
+<div class="column">
+<h2 class="working">Working</h2>
+<div id="working" class="taskBox" ondrop="drop(event)"ondragover="allowDrop(event)">
+</div>
+</div>
+
+<div class="column">
+<h2 class="done">Done</h2>
+<div id="done"class="taskBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
